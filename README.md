@@ -15,10 +15,10 @@ I have focused on IoT related data in the field of predictive maintenance.
 **sql-clustering.ipynb**
 The analysis notebook. You find the notebook fully rendered [here](https://nbviewer.jupyter.org/github/mikaelahonen/sql-clustering/blob/master/sql-clustering.html).
 
-**module.py**
+[**module.py**](module.py)
 The  contains the functions to generate and plot the sample data.
 
-**config.py**
+[**config.py**](config.py)
 Settings and variables for the calculations.
 
 ## Creating a temporary database in-memory
@@ -32,15 +32,15 @@ import sqlite3
 con = sqlite3.connect(":memory:")
 ```
 ## Choice of visualization library
-Standard python data visualization `matplotlib` is known a nice library for static plots.
+Standard python data visualization `matplotlib` is known as a nice library for static plots.
 
 For this kind of tutorials interactive plots are more instructive in my opinion. A user can hover the mouse all over and receive additional information.
 
-After some investigation I ended up using `plotly`. The implementation is effortless and it has great documentation.
+After some investigation I ended up using `plotly` because of its interactive capabilities. The implementation is effortless and it has great documentation.
 
-An interesting finding was the `dash` library based from `plotly`. `dash` is a dashboarding framework for advanced graphing.
+An interesting finding was the `dash` library based from `plotly`. `dash` is a dashboarding framework for advanced graphing. However `dash` was not used in this experiment.
 
 ## Rendering notebooks online
-GitHub should be able to render python notebooks in the web browser. Unfortunately some libraries that I used broke the rendering.
+GitHub should be able to render python notebooks in the web browser. Unfortunately some libraries in my project broke the rendering.
 
 Then I tried [nbviewer from Jupyter](https://nbviewer.jupyter.org) which didn't show the `plotly` charts properly. Finally saving the notebook as an `html` file and viewing through nbviewer solved the issue.
